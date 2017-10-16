@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:clickable="false"
+    android:focusableInTouchMode="false"
+    android:background="@drawable/background3"
+    android:id="@+id/linear">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextTV"
+        android:gravity="left"
+        android:textSize="@dimen/size_of_start"
+        android:textColor="@color/nextText"
+        android:text="@string/next" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:gravity="right"
+        android:textSize="@dimen/timer"
+        android:layout_alignBottom="@+id/nextTV"
+        android:layout_alignRight="@+id/gvMain"
+        android:layout_alignEnd="@+id/gvMain" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometerP1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometerP2"
+        android:layout_alignBottom="@+id/gvMain"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp" />
+
+    <GridView
+        android:id="@+id/gvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:numColumns="5"
+        android:layout_centerInParent="true"
+        android:clickable="false">
+    </GridView>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/refresh"
+        android:gravity="center"
+        android:layout_below="@+id/nextTV"
+        android:layout_marginTop="@dimen/begin_grid_but_margin"
+        android:src="@android:drawable/stat_notify_sync"
+        android:contentDescription="@string/refresh"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="@string/end"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings"
+        android:contentDescription="@string/settings"
+        android:src="@android:drawable/ic_menu_manage"
+        android:layout_alignTop="@+id/refresh"
+        android:layout_alignRight="@+id/chronometer"
+        android:layout_alignEnd="@+id/chronometer" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/records"
+        android:contentDescription="@string/settings"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:layout_alignTop="@+id/settings"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/sectwo"
+        android:visibility="invisible"
+        android:id="@+id/secTwo"
+        android:contentDescription="@string/abc_action_bar_home_description"/>
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/win"
+        android:visibility="invisible"
+        android:contentDescription="@string/abc_action_bar_home_description"/>
+
+</RelativeLayout>
